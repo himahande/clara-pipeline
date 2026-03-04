@@ -1,0 +1,66 @@
+ONBOARDING CALL TRANSCRIPT — Clara Answers
+Company: FireShield Protection Services (Charlotte, NC)
+Type: Post-Purchase Configuration
+Participants: Jen (Clara Implementation), Mike Reynolds (Operations, FireShield)
+
+---
+
+[Jen]: Hey Mike, Jen from Clara. Congrats on the purchase. This call is to lock in your exact config so Clara handles your calls correctly. I'll read back what we have and you tell me if it's right.
+
+[Mike]: Sounds good. Let's do it.
+
+[Jen]: First — business hours. We have you Monday through Friday, 7:30 AM to 5:00 PM Eastern.
+
+[Mike]: Yep, that's correct.
+
+[Jen]: And your address is 4521 Industrial Blvd, Charlotte, NC 28206?
+
+[Mike]: Yes. That's the main office.
+
+[Jen]: Got it. Now emergencies. We've got: active sprinkler leak, fire alarm activation, any flooding. Anything else we're missing?
+
+[Mike]: That covers it. I'd add — if someone says "sprinkler head popped" or "water pouring from the ceiling," same bucket as sprinkler leak.
+
+[Jen]: So active water from the fire suppression system, regardless of how they phrase it.
+
+[Mike]: Right.
+
+[Jen]: On-call routing. Primary is Mike Reynolds, 704-555-0142. If that doesn't answer, escalate to dispatch line 704-555-0100.
+
+[Mike]: Actually — 704-555-0142 is my cell, that's right. But the dispatch line is 704-555-0100. If I don't pick up, it goes to that line and whoever's monitoring will handle it.
+
+[Jen]: So try you first, then the dispatch line. How long should Clara wait before considering a transfer failed?
+
+[Mike]: Forty-five seconds. And retry three times.
+
+[Jen]: Three attempts, 45 seconds each. If all three fail, we have you saying: "I'm sorry I couldn't reach anyone. I've logged your emergency and someone will call you back within 15 minutes."
+
+[Mike]: That works. Make sure it says 15 minutes — we've had people think it means 15 hours.
+
+[Jen]: Noted. Non-emergency during business hours — those go to the front desk?
+
+[Mike]: Yes. During hours, anything that's not sprinkler leak, alarm, or flooding goes to the front desk. They'll triage from there.
+
+[Jen]: And non-emergency after hours? Inspections, general questions, "can someone call me back"?
+
+[Mike]: Collect the info. Name, callback number, what they need. We'll follow up next business day. Don't try to transfer those to anyone after hours.
+
+[Jen]: Understood. One more critical piece — ServiceTrade. You're on ServiceTrade for scheduling. What's the rule for job creation?
+
+[Mike]: Do NOT create sprinkler jobs in ServiceTrade. Ever. Only fire alarm and extinguisher jobs get created there.
+
+[Jen]: So sprinkler-related calls — even if it's a sprinkler leak emergency — Clara should not create a ServiceTrade job for sprinkler work.
+
+[Mike]: Correct. Sprinkler goes through our dispatch. We handle that separately. Fire alarm and extinguisher — yes, create the job. Sprinkler — no.
+
+[Jen]: Got it. I'm writing that down. Never create sprinkler jobs in ServiceTrade. Fire alarm and extinguisher only.
+
+[Mike]: Exactly.
+
+[Jen]: Anything else we should know before we go live?
+
+[Mike]: No, I think that's it. When do we flip the switch?
+
+[Jen]: Once this is locked in, we'll push the config tomorrow and do a test call with you. Sound good?
+
+[Mike]: Perfect. Thanks Jen.

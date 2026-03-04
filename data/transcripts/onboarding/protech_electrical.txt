@@ -1,0 +1,58 @@
+ONBOARDING CALL TRANSCRIPT — Clara Answers
+Company: ProTech Electrical Services (Denver, CO)
+Type: Post-Purchase Configuration
+Participants: Jen (Clara Implementation), Marcus Webb (Dispatch Manager, ProTech)
+
+---
+
+[Jen]: Hey Marcus, Jen from Clara. Config call for ProTech. Let me run through the setup and you confirm or correct.
+
+[Marcus]: Go for it.
+
+[Jen]: Business hours: Monday through Friday, 7:00 AM to 4:30 PM Mountain.
+
+[Marcus]: Yes.
+
+[Jen]: Address: 3300 Blake St, Denver, CO 80205.
+
+[Marcus]: Correct.
+
+[Jen]: Emergencies. We have: electrical fire, fire panel failure, code violation with immediate safety risk, power outage affecting fire systems.
+
+[Marcus]: That's right. And "immediate safety risk" is key — not every code violation. Like if they're getting fined next month, that's urgent but not emergency. We're talking building could get red-tagged today, people could get hurt. That kind of thing.
+
+[Jen]: So Clara needs to distinguish. Code violation where someone's at risk right now versus "inspector said we need to fix something" — the latter is urgent non-emergency?
+
+[Marcus]: Yeah. Use judgment. If they say "fire marshal is here" or "building might get shut down," that's emergency. "We failed an inspection" — schedule it, but don't page the on-call.
+
+[Jen]: Understood. Dispatch flow. First: main dispatch, 303-555-0188. If that fails, escalate to senior tech on-call, 303-555-0199.
+
+[Marcus]: Right. Try dispatch first. They're the primary. If no answer, hit the senior tech. He'll mobilize.
+
+[Jen]: Thirty seconds per transfer attempt, 3 retries.
+
+[Marcus]: Thirty seconds, three retries. Then the failure message.
+
+[Jen]: "I wasn't able to reach our dispatch team. I've created an urgent ticket and someone will call you within 10 minutes."
+
+[Marcus]: Ten minutes — yes. Make sure that's clear.
+
+[Jen]: After-hours non-emergency. We have: collect details, follow up next business day. You wanted us to explicitly say "next business day" so callers know it's not same-night?
+
+[Marcus]: Yes. A lot of people think "we'll call you back" means in an hour. We need Clara to say it'll be the next business day. No ambiguity.
+
+[Jen]: Got it. Integration piece. ServiceTrade for electrical jobs only. Fire alarm jobs go to a separate Fire Alarm Tracker spreadsheet — not ServiceTrade.
+
+[Marcus]: Correct. Electrical = ServiceTrade. Fire alarm = Fire Alarm Tracker. Two different systems. Don't mix them.
+
+[Jen]: So when someone calls about a fire panel or alarm issue, Clara creates an entry in the Fire Alarm Tracker, not a ServiceTrade job.
+
+[Marcus]: Right. And if it's straight electrical — no fire alarm component — ServiceTrade only.
+
+[Jen]: Perfect. Anything else?
+
+[Marcus]: No. When's launch?
+
+[Jen]: Config goes in tomorrow. Test call with you Thursday. We'll flip Friday if everything passes.
+
+[Marcus]: Good. Thanks Jen.

@@ -1,0 +1,86 @@
+DEMO CALL TRANSCRIPT — Clara Answers
+Company: Guardian Fire & Safety Inc
+Date: [Demo]
+Participants: Sarah (Clara Sales), Jennifer Walsh (Office Manager, Guardian)
+
+---
+
+[Sarah]: Hi Jennifer, thanks for talking today. Clara Answers is an AI voice agent that answers your business line 24/7. For companies like Guardian, it helps qualify calls and route them so you don't miss anything. Tell me about Guardian and how you handle calls now.
+
+[Jennifer]: We're in Atlanta. Fire extinguishers, suppression systems, inspections.
+
+[Sarah]: Mostly inspections or a mix?
+
+[Jennifer]: Mostly the inspection side. We're not like an alarm company with constant emergencies. A lot of our calls are scheduling. "When can you come do our annual?" That kind of thing.
+
+[Sarah]: So it's more routine than emergency?
+
+[Jennifer]: Mostly. We do get the occasional suppression system issue or extinguisher that needs immediate service. But yeah, it's probably 80% scheduling and 20% actual urgency.
+
+[Sarah]: What happens when those calls come in? Who's answering?
+
+[Jennifer]: Me, mostly. We're small.
+
+[Sarah]: Just you handling intake?
+
+[Jennifer]: Yeah. Office hours are about 8 to 4:30, sometimes 4. We're pretty strict on that. East coast. Atlanta time.
+
+[Sarah]: And when you're busy or it's after hours?
+
+[Jennifer]: Voicemail. And that's where we lose people.
+
+[Sarah]: When does it get worst?
+
+[Jennifer]: Especially in the fall. September, October — everybody wants their inspections done before year-end. We get slammed. The phone rings off the hook. I'm on another call, someone leaves a voicemail, and by the time I get back to them they've called our competitor. Or they just forget and we have to chase them.
+
+[Sarah]: So the pain is really during busy season — you can't catch every call when it comes in, and after 4:30 you're not there at all.
+
+[Jennifer]: Right. We've lost accounts that way. "Oh, we called last week, you never called back." Well, we had 40 voicemails and yours got buried. It's frustrating.
+
+[Sarah]: Do you have any after-hours emergencies — things that would need an immediate response?
+
+[Jennifer]: Rare, but it happens. Kitchen suppression system goes off, restaurant has to shut down.
+
+[Sarah]: Those are time-sensitive.
+
+[Jennifer]: Exactly. Extinguisher discharge in a warehouse. We'd want to know about those. We don't have a formal on-call — usually the owner would take it if someone tracked him down. But there's no system. No designated number, nothing.
+
+[Sarah]: So for true emergencies you'd want something in place, but it's not your main volume. The main volume is inspection scheduling.
+
+[Jennifer]: Exactly.
+
+[Sarah]: And when those scheduling calls come in after hours or when you're overwhelmed — what would be ideal? Just capture the info and you follow up in the morning?
+
+[Jennifer]: Yeah. Or even during the day, if I'm stuck on a call, something could take a message and we'd get to it. We just need to stop missing people. Our techs are good. Our pricing is good. We're losing people at the intake stage.
+
+[Sarah]: Do you use any field service software — ServiceTrade, ServiceTitan?
+
+[Jennifer]: ServiceTrade. For scheduling and work orders. I don't know if Clara connects to that.
+
+[Sarah]: We can look at that. So to summarize — your hours are roughly 8 to 4:30, Atlanta time. You're mostly inspection scheduling with some emergency suppression work. The big pain is missing calls during peak season and after hours.
+
+[Jennifer]: That's it. We're not a 24/7 alarm company. We just want to make sure we're not dropping balls when people try to reach us.
+
+[Sarah]: One more thing — for those emergency suppression calls, do you have someone who'd respond? Or would that be the owner every time?
+
+[Jennifer]: We have techs who could. We'd need to set that up. Right now it's kind of ad hoc. The owner gets woken up if it's bad enough. He's not thrilled about it either.
+
+[Sarah]: So the primary goal is really the scheduling piece — not missing those fall calls — and then having something in place for the rare emergency.
+
+[Jennifer]: Right. We're not trying to be a 24/7 call center. We just want to stop dropping the ball.
+
+[Sarah]: What's your call volume like during peak season? Ballpark.
+
+[Jennifer]: Maybe 30, 40 calls a day? Some days it feels like 60. It's unpredictable.
+
+[Sarah]: And when you're on a call and another comes in — does it ring through to voicemail immediately or does it queue somehow?
+
+[Jennifer]: Voicemail. We don't have a queue. It's just me and the phone.
+
+[Sarah]: So even during the day you could miss calls if you're on the line.
+
+[Jennifer]: Yeah. That's when we lose people in the fall. Back-to-back calls, I'm stuck on one, the next person gets voicemail, gives up.
+
+[Sarah]: So we're really solving for two things — overflow during the day when you're at capacity, and after-hours when you're not there at all.
+
+[Jennifer]: Exactly. And the rare emergency when it does happen. We'd want that handled too.

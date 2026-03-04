@@ -1,0 +1,58 @@
+ONBOARDING CALL TRANSCRIPT — Clara Answers
+Company: Apex Alarm & Sprinkler Co (Dallas, TX)
+Type: Post-Purchase Configuration
+Participants: Jen (Clara Implementation), Sarah Kim (Operations, Apex)
+
+---
+
+[Jen]: Hi Sarah, Jen from Clara. We're doing your config call for Apex. I'll confirm each piece and you correct anything that's off.
+
+[Sarah]: Sure, go ahead.
+
+[Jen]: Business hours: Monday through Friday, 8:00 AM to 5:00 PM Central.
+
+[Sarah]: Correct.
+
+[Jen]: Address: 8900 Commerce St, Suite 200, Dallas, TX 75201.
+
+[Sarah]: Yes. Suite 200 — make sure that's in there. We've had deliveries go to the wrong suite.
+
+[Jen]: Noted. Emergencies. We have: fire alarm going off, sprinkler head broken or leaking, water damage from the fire system.
+
+[Sarah]: That's right. Basically anything where there's active water or an alarm that needs response. Not just "we need an inspection next week."
+
+[Jen]: Understood. On-call — you guys do a week A / week B rotation. Week A is Tom Garcia, 214-555-0198. Week B is you, Sarah Kim, 214-555-0234.
+
+[Sarah]: Right. Tom's this week, I'm next week. Clara needs to know which week we're in, or do you have a calendar?
+
+[Jen]: We'll sync with a simple rule — we'll set the active on-call in our system and you or Tom update it when the week changes. Or we can tie it to a shared calendar if you have one.
+
+[Sarah]: We don't have a shared calendar. We'll just tell you when to switch. Tom to Sarah, Sarah to Tom, every Monday.
+
+[Jen]: Got it. Transfer timeout and retries — we have 60 seconds per attempt, 2 retries.
+
+[Sarah]: Sixty seconds is good. Two retries before giving up.
+
+[Jen]: One thing — alarm calls. You mentioned a monitoring center. Do those come in differently?
+
+[Sarah]: Yes. When an alarm goes off, the monitoring center often calls us first. Their number is 214-555-0300. If someone's calling about an alarm, they might be the monitoring center, not the end customer. Either way, that's an emergency — route it the same. But if Clara can identify "this is from our monitoring center," that context helps. Not required for routing though.
+
+[Jen]: So same routing either way — alarm = emergency, go to on-call. The monitoring center number is 214-555-0300 for reference.
+
+[Sarah]: Right.
+
+[Jen]: Non-emergency during hours goes to front office, 214-555-0100.
+
+[Sarah]: Yes.
+
+[Jen]: After hours non-emergency — take a message and promise callback by 9 AM next business day?
+
+[Sarah]: Yes. By 9 AM. We're pretty strict about that. If we say 9, we call by 9.
+
+[Jen]: Perfect. Anything else?
+
+[Sarah]: No, I think we're good. When do we go live?
+
+[Jen]: Config will be ready by end of week. We'll run a test and then flip. I'll send you the finalized summary after this call.
+
+[Sarah]: Great. Thanks Jen.

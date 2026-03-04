@@ -1,0 +1,66 @@
+ONBOARDING CALL TRANSCRIPT — Clara Answers
+Company: Summit Mechanical Services (Portland, OR)
+Type: Post-Purchase Configuration
+Participants: Jen (Clara Implementation), Dave Chen (Supervisor, Summit)
+
+---
+
+[Jen]: Hi Dave, Jen from Clara. Config call for Summit Mechanical. I'll confirm each piece and you tell me what's wrong.
+
+[Dave]: Alright.
+
+[Jen]: Business hours: Monday through Friday, 8:00 AM to 5:00 PM Pacific.
+
+[Dave]: Yes.
+
+[Jen]: Address: 2100 NW Industrial Way, Portland, OR 97210.
+
+[Dave]: Correct.
+
+[Jen]: Emergencies. We have: complete HVAC failure in commercial building, refrigerant leak, no heat when it's below 40°F outside, fire damper failure.
+
+[Dave]: Right. On the heat one — below 40 outside. If it's 45 and they're cold, that's not an emergency. We need the temp threshold. Forty degrees.
+
+[Jen]: So Clara should ask or assume — if they say "no heat" we clarify the outside temp, or if it's obviously winter and they're commercial, we treat below 40 as the trigger?
+
+[Dave]: If they say "no heat" and it's a commercial building, we usually assume it could be critical. But the 40 degree rule is for when we're deciding. You could have Clara ask "What's the current outside temperature?" if they don't volunteer it. Or if it's between November and March in Portland, assume it could be cold enough.
+
+[Jen]: Got it. We'll code 40°F as the threshold. Refrigerant leak and fire damper — those are always emergency regardless of temp?
+
+[Dave]: Yeah. Refrigerant's a health hazard. Fire damper failure — life safety. Those are immediate.
+
+[Jen]: On-call. Main line first, 503-555-0160. If that fails, supervisor Dave Chen, 503-555-0177.
+
+[Dave]: Right. Main line is our after-hours rollover. If nobody picks up there, my cell is the backup.
+
+[Jen]: Forty-five seconds per attempt, 2 retries.
+
+[Dave]: Yes.
+
+[Jen]: Failure message: "I'm sorry, I couldn't reach our on-call team. Your information has been logged as urgent and you'll receive a callback within 20 minutes."
+
+[Dave]: Twenty minutes. Good.
+
+[Jen]: Non-emergency during hours goes to office manager, 503-555-0155.
+
+[Dave]: Yes.
+
+[Jen]: After hours non-emergency — collect details, confirm next-day follow-up.
+
+[Dave]: Right. Don't transfer. Just log it and we'll reach out.
+
+[Jen]: You use FieldEdge for scheduling. Any constraint for Clara? Like only create certain job types, or route differently based on work type?
+
+[Dave]: No specific constraints. We'll handle FieldEdge on our end. Clara just needs to capture the info and get emergencies to us. The rest we'll schedule ourselves.
+
+[Jen]: Perfect. So no integration rules — standard capture and routing.
+
+[Dave]: Correct.
+
+[Jen]: That's everything. I'll send the config summary. You good?
+
+[Dave]: Yeah. When do we go live?
+
+[Jen]: Next week. I'll schedule a test call with you before we flip.
+
+[Dave]: Sounds good. Thanks Jen.

@@ -1,0 +1,88 @@
+DEMO CALL TRANSCRIPT — Clara Answers
+Company: FireShield Protection Services
+Date: [Demo]
+Participants: Sarah (Clara Sales), Mike Chen (Operations, FireShield)
+
+---
+
+[Sarah]: Hey Mike, thanks for jumping on. I know you're busy. So quick intro — Clara Answers is an AI voice agent that answers your phones 24/7. For service trade companies like yours, it can take calls, qualify emergencies, and route them to the right people. Tell me a bit about FireShield and how you guys handle calls today.
+
+[Mike]: Yeah, so we're based in Charlotte. Fire protection, sprinkler systems, fire alarms — the full package.
+
+[Sarah]: Nice. How long have you been at it?
+
+[Mike]: About twelve years. We've grown a lot. We're on ServiceTrade for scheduling and work orders.
+
+[Sarah]: Got it. So when someone calls, where does that call land right now?
+
+[Mike]: During the day we've got a front desk person. She takes everything — new work, scheduling, questions.
+
+[Sarah]: One person handling it all?
+
+[Mike]: Yeah. And then we get a ton of after-hours stuff. Sprinkler leaks, alarm activations, that kind of thing. People call the main number and it goes to voicemail. By the time we check it in the morning, they've already gone somewhere else. Or worse, it's a real emergency and we missed it.
+
+[Sarah]: How often would you say you're getting those after-hours calls?
+
+[Mike]: Oh man, at least a few a week. More in winter when pipes freeze.
+
+[Sarah]: The freeze-and-burst thing.
+
+[Mike]: Right. Sprinkler heads pop, water everywhere. We've had customers — big retail, restaurants — leave us voicemails at 2 AM and by 9 we've lost them. They had to call somebody else who answered.
+
+[Sarah]: That's rough. So right now after hours it's just... voicemail?
+
+[Mike]: Yeah. We've kicked around an on-call rotation but we never really set it up properly. I think we had a number people could text? But it wasn't really organized. And honestly our hours are — we're roughly 7:30 to 5, Monday through Friday. Sometimes a little earlier if there's a big job.
+
+[Sarah]: 7:30 to 5, that's your office hours?
+
+[Mike]: Yeah, Charlotte time. Eastern.
+
+[Sarah]: And when someone does call after hours with a sprinkler leak or alarm issue — who would you want that to go to? Is there a designated on-call person or is it more like whoever's available?
+
+[Mike]: We'd want it to go to somebody who can actually respond. I mean, we don't have a formal rotation.
+
+[Sarah]: So no set schedule — who's on when, that kind of thing?
+
+[Mike]: Right. Usually it's me or our lead installer, but we haven't really defined it. We'd need to figure that out. We've got maybe four or five guys who could do it. Just never formalized the routing or — I don't know, the whole flow.
+
+[Sarah]: Makes sense. So the pain is really after-hours — you're losing calls, losing customers, and some of those are legitimate emergencies. During the day you're okay with the front desk?
+
+[Mike]: During the day we're fine. She's good. Busy, but she handles it. It's the nights and weekends that kill us.
+
+[Sarah]: And with ServiceTrade — do you need calls to flow into ServiceTrade in some way, or is that more for your techs and scheduling?
+
+[Mike]: We use it for work orders and scheduling. I'm not sure if there's an integration or something. We'd want new requests to eventually end up there, but I don't know the tech side of that.
+
+[Sarah]: No worries, we can dig into that later. One more thing — when you say "emergency," what counts? Sprinkler leak, alarm going off. Anything else?
+
+[Mike]: Yeah, sprinkler leaks for sure. Active alarms — we need to respond. Fire panel issues, inspections that got flagged.
+
+[Sarah]: Inspections that got flagged — like they failed and need immediate follow-up?
+
+[Mike]: Right. I'd say anything where there's water damage or a building could get shut down. We've had fire marshals show up and lock places down because an alarm wasn't addressed. That kind of thing.
+
+[Sarah]: So water, alarms, code compliance — anything that could shut a building down. And for routing, you'd want to nail down who gets those calls and in what order. First person, backup if they don't pick up, that whole chain.
+
+[Mike]: Right. We just haven't had the bandwidth to set that up. That's why I wanted to look at something like Clara.
+
+[Sarah]: One last thing — weekends. Same story as nights? Voicemail?
+
+[Mike]: Yeah. Saturdays we sometimes have guys in the field but nobody's answering the office line. Same problem.
+
+[Sarah]: Okay. So we're really talking nights and weekends, making sure you catch those and route them properly. I think we can help with that. One more thing — when the front desk is taking a call during the day, does it ever overflow? Like she's on a call and another one comes in?
+
+[Mike]: Yeah, sometimes. It goes to her voicemail or just rings. She'll call people back but there's a delay.
+
+[Sarah]: So there could be value during business hours too — catching overflow when she's tied up.
+
+[Mike]: Maybe. The main thing for us is after hours. But yeah, I could see that helping.
+
+[Sarah]: Last thing — do you have a sense of call volume? How many after-hours calls per week on average?
+
+[Mike]: In winter, maybe five to ten. Summer it's less — two or three. Depends on the weather and what's going on with our customer base.
+
+[Sarah]: And for routing — when we set it up, we'd need phone numbers for whoever's in the on-call pool. First person, second person, that kind of thing.
+
+[Mike]: Right. We can pull that together. Like I said, we'd need to define the whole flow. But we're motivated. This has been a pain point for a while.
+
+[Sarah]: Got it. Let me put together some next steps.

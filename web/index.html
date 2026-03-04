@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clara Pipeline Dashboard</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --text: #e4e4e7;
+      --muted: #71717a;
+      --accent: #6366f1;
+      --accent2: #818cf8;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --red: #ef4444;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    header h1 { font-size: 1.5rem; font-weight: 600; }
+    header h1 span { color: var(--accent); }
+    .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; }
+    .badge-v1 { background: #1e3a5f; color: #60a5fa; }
+    .badge-v2 { background: #14532d; color: #4ade80; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+    .stat-card .label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem; }
+    .stat-card .value { font-size: 1.75rem; font-weight: 700; }
+    .accounts-grid { display: grid; gap: 1rem; }
+    .account-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; cursor: pointer; transition: border-color 0.2s; }
+    .account-card:hover { border-color: var(--accent); }
+    .account-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+    .account-name { font-size: 1.1rem; font-weight: 600; }
+    .account-id { font-size: 0.8rem; color: var(--muted); font-family: monospace; }
+    .versions { display: flex; gap: 0.5rem; }
+    .detail-panel { display: none; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-top: 1rem; }
+    .detail-panel.active { display: block; }
+    .tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .tab { padding: 0.4rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text); cursor: pointer; font-size: 0.85rem; }
+    .tab.active { background: var(--accent); border-color: var(--accent); }
+    .json-view { background: #12141c; border-radius: 8px; padding: 1rem; overflow-x: auto; font-family: 'Cascadia Code', 'Fira Code', monospace; font-size: 0.82rem; line-height: 1.6; white-space: pre-wrap; max-height: 500px; overflow-y: auto; }
+    .changelog { background: #12141c; border-radius: 8px; padding: 1rem; font-size: 0.9rem; line-height: 1.7; white-space: pre-wrap; max-height: 500px; overflow-y: auto; }
+    .diff-add { color: var(--green); }
+    .diff-remove { color: var(--red); }
+    .diff-change { color: var(--yellow); }
+    .upload-section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+    .upload-section h2 { font-size: 1rem; margin-bottom: 1rem; }
+    .upload-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: end; }
+    .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+    .form-group label { font-size: 0.8rem; color: var(--muted); }
+    .form-group input, .form-group select { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 0.75rem; color: var(--text); font-size: 0.85rem; }
+    button.primary { background: var(--accent); color: white; border: none; border-radius: 8px; padding: 0.55rem 1.25rem; cursor: pointer; font-size: 0.85rem; font-weight: 500; transition: opacity 0.2s; }
+    button.primary:hover { opacity: 0.9; }
+    button.primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    .loading { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .toast { position: fixed; bottom: 2rem; right: 2rem; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.85rem; z-index: 100; animation: slideIn 0.3s; }
+    .toast-success { background: #14532d; color: #4ade80; }
+    .toast-error { background: #450a0a; color: #fca5a5; }
+    @keyframes slideIn { from { transform: translateY(1rem); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1><span>Clara</span> Pipeline Dashboard</h1>
+    <button class="primary" onclick="refresh()">Refresh</button>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="upload-section">
+    <h2>Process Transcript</h2>
+    <div class="upload-row">
+      <div class="form-group">
+        <label>Pipeline</label>
+        <select id="pipeline-select">
+          <option value="a">Pipeline A (Demo → v1)</option>
+          <option value="b">Pipeline B (Onboarding → v2)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Transcript file</label>
+        <input type="file" id="file-input" accept=".txt,.md,.text">
+      </div>
+      <div class="form-group" id="account-id-group" style="display:none">
+        <label>Account ID (for Pipeline B)</label>
+        <input type="text" id="account-id-input" placeholder="e.g. fireshield_protection_services">
+      </div>
+      <button class="primary" id="run-btn" onclick="runPipeline()">Run</button>
+    </div>
+  </div>
+
+  <div class="accounts-grid" id="accounts"></div>
+  <div class="detail-panel" id="detail"></div>
+</div>
+
+<script>
+const API = window.location.origin;
+
+document.getElementById('pipeline-select').addEventListener('change', e => {
+  document.getElementById('account-id-group').style.display = e.target.value === 'b' ? 'block' : 'none';
+});
+
+async function refresh() {
+  try {
+    const res = await fetch(`${API}/api/accounts`);
+    const data = await res.json();
+    renderStats(data.accounts);
+    renderAccounts(data.accounts);
+  } catch (e) { toast('Failed to load accounts: ' + e.message, 'error'); }
+}
+
+function renderStats(accounts) {
+  const total = accounts.length;
+  const v2Count = accounts.filter(a => a.versions.includes('v2')).length;
+  const v1Only = total - v2Count;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat-card"><div class="label">Total Accounts</div><div class="value">${total}</div></div>
+    <div class="stat-card"><div class="label">v1 Only</div><div class="value" style="color:var(--yellow)">${v1Only}</div></div>
+    <div class="stat-card"><div class="label">v1 + v2</div><div class="value" style="color:var(--green)">${v2Count}</div></div>
+    <div class="stat-card"><div class="label">Changelogs</div><div class="value">${accounts.filter(a => a.has_changelog).length}</div></div>
+  `;
+}
+
+function renderAccounts(accounts) {
+  if (!accounts.length) {
+    document.getElementById('accounts').innerHTML = '<p style="color:var(--muted)">No accounts processed yet. Upload a transcript to get started.</p>';
+    return;
+  }
+  document.getElementById('accounts').innerHTML = accounts.map(a => `
+    <div class="account-card" onclick="loadAccount('${a.account_id}')">
+      <div class="account-header">
+        <div>
+          <div class="account-name">${a.account_id.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</div>
+          <div class="account-id">${a.account_id}</div>
+        </div>
+        <div class="versions">
+          ${a.versions.map(v => `<span class="badge badge-${v}">${v}</span>`).join('')}
+          ${a.has_changelog ? '<span class="badge" style="background:#422006;color:#fbbf24">changelog</span>' : ''}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function loadAccount(id) {
+  try {
+    const res = await fetch(`${API}/api/accounts/${id}`);
+    const data = await res.json();
+    renderDetail(data);
+  } catch (e) { toast('Failed to load account: ' + e.message, 'error'); }
+}
+
+function renderDetail(data) {
+  const panel = document.getElementById('detail');
+  panel.classList.add('active');
+  const hasV2 = !!data.v2?.memo;
+  let tabsHtml = `
+    <div class="tabs">
+      <button class="tab active" onclick="showTab(this,'memo-v1')">Memo v1</button>
+      <button class="tab" onclick="showTab(this,'spec-v1')">Agent Spec v1</button>
+      ${hasV2 ? `
+        <button class="tab" onclick="showTab(this,'memo-v2')">Memo v2</button>
+        <button class="tab" onclick="showTab(this,'spec-v2')">Agent Spec v2</button>
+        <button class="tab" onclick="showTab(this,'changelog')">Changelog</button>
+        <button class="tab" onclick="showTab(this,'diff-view')">Diff View</button>
+      ` : ''}
+    </div>
+  `;
+  let contentHtml = `
+    <div id="memo-v1" class="tab-content"><pre class="json-view">${syntaxHL(data.v1.memo)}</pre></div>
+    <div id="spec-v1" class="tab-content" style="display:none"><pre class="json-view">${syntaxHL(data.v1.agent_spec)}</pre></div>
+  `;
+  if (hasV2) {
+    contentHtml += `
+      <div id="memo-v2" class="tab-content" style="display:none"><pre class="json-view">${syntaxHL(data.v2.memo)}</pre></div>
+      <div id="spec-v2" class="tab-content" style="display:none"><pre class="json-view">${syntaxHL(data.v2.agent_spec)}</pre></div>
+      <div id="changelog" class="tab-content" style="display:none"><div class="changelog">${formatChangelog(data.changelog || 'No changelog available.')}</div></div>
+      <div id="diff-view" class="tab-content" style="display:none"><div class="changelog">${buildDiffView(data.v1.memo, data.v2.memo)}</div></div>
+    `;
+  }
+  panel.innerHTML = tabsHtml + contentHtml;
+}
+
+function showTab(btn, id) {
+  btn.closest('.detail-panel').querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  btn.closest('.detail-panel').querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+
+function syntaxHL(obj) {
+  return JSON.stringify(obj, null, 2)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/"([^"]+)":/g, '<span style="color:#818cf8">"$1"</span>:')
+    .replace(/: "([^"]*)"/g, ': <span style="color:#4ade80">"$1"</span>')
+    .replace(/: (\d+)/g, ': <span style="color:#fbbf24">$1</span>')
+    .replace(/: (null)/g, ': <span style="color:#71717a">null</span>')
+    .replace(/: (true|false)/g, ': <span style="color:#f472b6">$1</span>');
+}
+
+function formatChangelog(md) {
+  return md.replace(/^## (.+)$/gm, '<strong style="color:var(--accent2)">$1</strong>')
+    .replace(/^# (.+)$/gm, '<strong style="font-size:1.1rem">$1</strong>')
+    .replace(/`([^`]+)` → `([^`]+)`/g, '<span class="diff-remove">$1</span> → <span class="diff-add">$2</span>')
+    .replace(/`([^`]+)`/g, '<code style="background:#1e1e2e;padding:0.1rem 0.3rem;border-radius:4px">$1</code>')
+    .replace(/^\*\*(.+?)\*\*/gm, '<strong>$1</strong>')
+    .replace(/^- /gm, '  • ');
+}
+
+function buildDiffView(v1, v2) {
+  if (!v1 || !v2) return 'No diff available.';
+  let lines = [];
+  const keys = new Set([...Object.keys(v1), ...Object.keys(v2)]);
+  for (const k of keys) {
+    const a = JSON.stringify(v1[k], null, 2);
+    const b = JSON.stringify(v2[k], null, 2);
+    if (a === b) {
+      lines.push(`<span style="color:var(--muted)">  ${k}: (unchanged)</span>`);
+    } else if (!v1[k] && v2[k]) {
+      lines.push(`<span class="diff-add">+ ${k}: ${b}</span>`);
+    } else if (v1[k] && !v2[k]) {
+      lines.push(`<span class="diff-remove">- ${k}: ${a}</span>`);
+    } else {
+      lines.push(`<span class="diff-change">~ ${k}:</span>`);
+      lines.push(`<span class="diff-remove">  - ${a}</span>`);
+      lines.push(`<span class="diff-add">  + ${b}</span>`);
+    }
+  }
+  return lines.join('\n');
+}
+
+async function runPipeline() {
+  const pipeline = document.getElementById('pipeline-select').value;
+  const fileInput = document.getElementById('file-input');
+  const btn = document.getElementById('run-btn');
+  if (!fileInput.files.length) { toast('Select a transcript file', 'error'); return; }
+
+  const formData = new FormData();
+  formData.append('file', fileInput.files[0]);
+  if (pipeline === 'b') {
+    const aid = document.getElementById('account-id-input').value.trim();
+    if (!aid) { toast('Account ID required for Pipeline B', 'error'); return; }
+    formData.append('account_id', aid);
+  }
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading"></span> Running...';
+  try {
+    const url = pipeline === 'a' ? `${API}/api/pipeline-a/upload` : `${API}/api/pipeline-b/upload`;
+    const res = await fetch(url, { method: 'POST', body: formData });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.detail || 'Pipeline failed');
+    toast(`Pipeline ${pipeline.toUpperCase()} complete: ${data.account_id} (${data.version})`, 'success');
+    refresh();
+    loadAccount(data.account_id);
+  } catch (e) { toast(e.message, 'error'); }
+  finally { btn.disabled = false; btn.textContent = 'Run'; }
+}
+
+function toast(msg, type = 'success') {
+  const el = document.createElement('div');
+  el.className = `toast toast-${type}`;
+  el.textContent = msg;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 4000);
+}
+
+refresh();
+</script>
+</body>
+</html>

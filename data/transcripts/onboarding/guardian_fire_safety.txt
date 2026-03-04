@@ -1,0 +1,58 @@
+ONBOARDING CALL TRANSCRIPT — Clara Answers
+Company: Guardian Fire & Safety Inc (Atlanta, GA)
+Type: Post-Purchase Configuration
+Participants: Jen (Clara Implementation), David Okonkwo (Operations, Guardian)
+
+---
+
+[Jen]: Hi David, Jen from Clara. Config call for Guardian. I'll run through everything and you tell me what to adjust.
+
+[David]: Alright, let's lock it in.
+
+[Jen]: Business hours: Monday through Friday, 8:00 AM to 4:30 PM Eastern.
+
+[David]: Correct.
+
+[Jen]: Address: 1200 Peachtree Industrial Blvd, Atlanta, GA 30309.
+
+[David]: Yes.
+
+[Jen]: Now emergencies. This is where I need to be precise. We have: only active fire suppression discharge or system failure in an occupied building.
+
+[David]: Right. And I need to stress — everything else is non-emergency. Even if they're panicked. "Our alarm keeps beeping" — non-emergency. "We need someone ASAP for an inspection" — non-emergency. Only active discharge or system failure in an occupied building.
+
+[Jen]: So Clara has to be strict. Discharge or failure, building occupied. "Alarm went off yesterday" or "we think there might be a problem" — those don't qualify.
+
+[David]: Exactly. We've had people cry emergency for battery low beeps. That's a scheduled visit, not a middle-of-the-night call.
+
+[Jen]: Understood. On-call: single point of contact, your dispatch line, 404-555-0175.
+
+[David]: Yes. One number. We don't route to individuals after hours — everything goes to dispatch. They'll figure out who to send.
+
+[Jen]: Transfer timeout 30 seconds, retry 2 times.
+
+[David]: Thirty's good. Two retries.
+
+[Jen]: Non-emergency during hours — schedule via office, 404-555-0150. Ask for preferred date when scheduling?
+
+[David]: Yes. And when it's an inspection, collect: property name, address, contact person, and preferred week. Don't need the exact day, but we want to know if they have a window. Like "sometime the week of the 15th."
+
+[Jen]: Property name, address, contact, preferred week. Got it.
+
+[David]: Right.
+
+[Jen]: After hours non-emergency — same drill, collect info, follow up next business day?
+
+[David]: Yes. No transfers after hours for non-emergency.
+
+[Jen]: Any integrations or constraints? ServiceTrade, ServiceTitan, anything we need to know about job creation?
+
+[David]: No specific constraints. We use a few tools but nothing that changes how Clara routes or creates tickets. Standard flow is fine.
+
+[Jen]: Perfect. That's everything. I'll send the config summary for your review. Anything to add?
+
+[David]: No. We're good. When's go-live?
+
+[Jen]: End of this week. I'll be in touch for the test call.
+
+[David]: Sounds good. Thanks Jen.

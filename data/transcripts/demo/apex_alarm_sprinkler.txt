@@ -1,0 +1,86 @@
+DEMO CALL TRANSCRIPT — Clara Answers
+Company: Apex Alarm & Sprinkler Co
+Date: [Demo]
+Participants: Sarah (Clara Sales), David Torres (Operations Manager, Apex)
+
+---
+
+[Sarah]: Hey David, thanks for your time. So Clara Answers is an AI phone agent for service trade companies — it answers calls 24/7, qualifies emergencies, and routes to your team. Walk me through how Apex handles incoming calls today.
+
+[David]: We're in the Dallas area. Fire alarms, sprinkler install and maintenance.
+
+[Sarah]: Both, or do you focus on one?
+
+[David]: Both. Full service. We've got 24/7 monitoring on some of our alarm systems, but the office — that's 8 to 5. That's when we have people answering.
+
+[Sarah]: So you do monitoring 24/7, but the main office line is only staffed 8 to 5?
+
+[David]: Right. The monitoring goes to a central station, that's separate. But when a customer or property manager calls our main number — new service, questions, emergencies — that comes to us. After 5 it goes to voicemail. And that's the problem.
+
+[Sarah]: What's happening when those after-hours calls hit voicemail?
+
+[David]: We're missing them. Plain and simple. Last month we had a property manager calling at like 10 PM — sprinkler went off in a vacant unit, water everywhere.
+
+[Sarah]: Vacant unit, so no one was there to catch it?
+
+[David]: Right. Left us a voicemail. We didn't see it till 8 the next morning. By then they'd called three other companies. We looked bad. And that was a customer we'd had for years.
+
+[Sarah]: Ouch. So it's not just lost revenue, it's reputation.
+
+[David]: Yeah. And we've talked about an on-call rotation. We have guys who would do it, but we've never really... you know, formalized it. Who's on when, what number to give out, how to escalate. It's been on the to-do list forever.
+
+[Sarah]: So right now there's no formal on-call setup at all?
+
+[David]: Not really. Sometimes the office manager will give out her cell if it's a VIP customer. But that's not scalable. And she's not thrilled about it.
+
+[Sarah]: Fair. So your hours are 8 to 5 — Dallas time, I'm assuming?
+
+[David]: Yeah, Central. Monday through Friday.
+
+[Sarah]: And during business hours, who's answering?
+
+[David]: We've got two people. One does dispatching, one does billing and intake. They bounce calls between them depending on what it is. It works during the day. We're not drowning. It's really the after-hours piece.
+
+[Sarah]: When you do get those emergency calls — sprinkler activation, water damage — who would you want them to go to if you had a system?
+
+[David]: Probably one of our senior techs first. Or me. I'm usually the one they'd call anyway if they had my number.
+
+[Sarah]: So you'd be the escalation if the tech doesn't pick up?
+
+[David]: Yeah. We'd need to figure out the order. Maybe tech on first rotation, then me if they don't answer. We've got a couple guys who'd be willing to do on-call. We just never set up the actual rotation — who's on which nights, how to hand off. That kind of thing.
+
+[Sarah]: So the routing isn't fully defined yet — that's something we'd work through. What else would you consider an emergency? Sprinkler, water...
+
+[David]: Sprinkler leaks, alarm activations, fire panel trouble. Anything where the building's at risk or there's active water.
+
+[Sarah]: False alarms — do those need immediate response or can they wait?
+
+[David]: They still need a call back. You can't just leave an alarm going. Sometimes it's just a low battery. Sometimes it's not. We'd want to know either way.
+
+[Sarah]: And for non-emergency stuff — inspection scheduling, quote requests — would that go somewhere different, or same queue?
+
+[David]: Same people during the day. After hours... I guess we'd want to take a message or have them leave details? We definitely don't want to wake somebody up at midnight for a routine inspection request.
+
+[Sarah]: Right. So Clara could capture that and have your team follow up in the morning.
+
+[David]: Yeah, that'd be the idea.
+
+[Sarah]: Any other software you're using — ServiceTitan, ServiceTrade, FieldEdge, anything like that?
+
+[David]: We're on ServiceTitan. Not sure how that would connect, but we use it for everything.
+
+[Sarah]: We can talk integrations. The main thing is making sure you stop missing those after-hours calls and get them to the right person.
+
+[David]: That's exactly what we need.
+
+[Sarah]: Quick question — when you said on-call rotation, do you have an idea of how many people would be in that pool? Or is that TBD?
+
+[David]: We've got maybe three or four. Like I said, we haven't formalized it. I'd want to sit down and map it out before we go live with anything.
+
+[Sarah]: Totally. And the VIP thing — giving out personal cells — that's not something you'd want to scale?
+
+[David]: No way. She's already burned out. We need a proper system.
+
+[Sarah]: Understood. So the goal is: answer every call, figure out if it's urgent, route emergencies to the right person, capture the rest for follow-up. Sound right?
+
+[David]: Yeah. That's the idea.

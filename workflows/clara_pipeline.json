@@ -1,0 +1,145 @@
+{
+  "name": "Clara Pipeline – Demo & Onboarding",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "mode": "list",
+        "binaryPropertyName": "data",
+        "options": {},
+        "filePath": "/data/transcripts/demo/"
+      },
+      "id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "name": "List Demo Transcripts",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [420, 200],
+      "notes": "Lists all .txt files in the demo transcripts directory"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/pipeline-a",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ transcript: $json.data, account_id: null }) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "name": "Run Pipeline A",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [660, 200],
+      "notes": "Sends demo transcript to Pipeline A API endpoint"
+    },
+    {
+      "parameters": {
+        "mode": "list",
+        "binaryPropertyName": "data",
+        "options": {},
+        "filePath": "/data/transcripts/onboarding/"
+      },
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "name": "List Onboarding Transcripts",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [420, 450],
+      "notes": "Lists all .txt files in the onboarding transcripts directory"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/pipeline-b",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ transcript: $json.data, account_id: $json.account_id }) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "name": "Run Pipeline B",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [660, 450],
+      "notes": "Sends onboarding transcript to Pipeline B API endpoint"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://host.docker.internal:8000/api/accounts",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0006-4000-8000-000000000006",
+      "name": "Get Results Summary",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [900, 300],
+      "notes": "Fetches summary of all processed accounts"
+    },
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0007-4000-8000-000000000007",
+      "name": "Done",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1120, 300]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          { "node": "List Demo Transcripts", "type": "main", "index": 0 },
+          { "node": "List Onboarding Transcripts", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "List Demo Transcripts": {
+      "main": [
+        [{ "node": "Run Pipeline A", "type": "main", "index": 0 }]
+      ]
+    },
+    "Run Pipeline A": {
+      "main": [
+        [{ "node": "Get Results Summary", "type": "main", "index": 0 }]
+      ]
+    },
+    "List Onboarding Transcripts": {
+      "main": [
+        [{ "node": "Run Pipeline B", "type": "main", "index": 0 }]
+      ]
+    },
+    "Run Pipeline B": {
+      "main": [
+        [{ "node": "Get Results Summary", "type": "main", "index": 0 }]
+      ]
+    },
+    "Get Results Summary": {
+      "main": [
+        [{ "node": "Done", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1",
+  "meta": {
+    "instanceId": "clara-pipeline-local"
+  },
+  "tags": [
+    { "name": "clara" },
+    { "name": "automation" }
+  ]
+}

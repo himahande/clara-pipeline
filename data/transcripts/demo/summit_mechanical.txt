@@ -1,0 +1,86 @@
+DEMO CALL TRANSCRIPT — Clara Answers
+Company: Summit Mechanical Services
+Date: [Demo]
+Participants: Sarah (Clara Sales), Rachel Kim (Operations, Summit)
+
+---
+
+[Sarah]: Hey Rachel, thanks for jumping on. Clara Answers is an AI voice agent for service trade companies — 24/7 answering, qualifying calls, routing to your team. Tell me about Summit and how you're handling calls right now.
+
+[Rachel]: We're in Portland. HVAC, mechanical, and we've gotten into some fire protection work — dampers, inspections.
+
+[Sarah]: So HVAC is the core, fire protection is newer?
+
+[Rachel]: Right. We've been growing fast. Like, really fast.
+
+[Sarah]: Congrats. Growth is good. Where does it hurt?
+
+[Rachel]: The phones. We can't keep up.
+
+[Sarah]: In what way?
+
+[Rachel]: Office hours are 8 to 5, Monday through Friday. Pacific time. We've got a receptionist and someone doing dispatch, but when it gets busy — and it's always busy now — calls go to voicemail. We're missing people. Quotes, service requests, emergencies.
+
+[Sarah]: Emergencies — what counts as an emergency for you?
+
+[Rachel]: No heat in winter. No AC in summer for commercial. We've got office buildings, retail, some medical. If the HVAC goes down, they need someone. We've had property managers calling at 6 AM — building's freezing, tenants are complaining. They leave a voicemail. We don't see it till 8. By then they've called someone else.
+
+[Sarah]: So HVAC failures, especially when it affects occupancy. Any fire protection emergencies or is that more scheduled?
+
+[Rachel]: Fire dampers, inspections — those are usually scheduled. But if something fails an inspection and they need it fixed ASAP, that could be urgent. Mostly it's the HVAC. No heat, no cooling. That's our bread and butter for emergencies.
+
+[Sarah]: Do you have any kind of on-call or after-hours coverage right now?
+
+[Rachel]: We've kicked it around. We have techs who'd do it. But we haven't set it up. No rotation, no clear process. It's chaotic. We're just trying to stay ahead of the work we have.
+
+[Sarah]: So after 5 it's voicemail, and there's no formal escalation for emergencies.
+
+[Rachel]: Right.
+
+[Sarah]: During the day — when you're overwhelmed, who's supposed to catch overflow?
+
+[Rachel]: Whoever's free. It's not really defined. Sometimes the receptionist, sometimes dispatch. If both are on calls, it rings. Or voicemail. We've had people say they called three times before we got back to them.
+
+[Sarah]: Ouch. So it's both — you're missing calls during business hours when you're at capacity, and you have zero coverage after hours.
+
+[Rachel]: Yeah. We're adding techs, we're adding trucks. The bottleneck is the office. We can't scale the front desk the same way.
+
+[Sarah]: Makes sense. If you did have a system — who would emergencies go to? Tech on rotation? You?
+
+[Rachel]: Probably a senior tech first. Or me. I'm usually the one who figures out who goes where. We'd need to work through the details. Who's on when, backup order. We haven't formalized any of it.
+
+[Sarah]: And for non-emergency — scheduling, quotes — would that go somewhere different or same place?
+
+[Rachel]: Same people during the day. After hours, we'd want to capture it. Take a message, get the info. We'll follow up. We don't need to wake somebody up at night for a quote request.
+
+[Sarah]: What software are you using?
+
+[Rachel]: ServiceTitan. For scheduling, dispatching, invoicing. The usual.
+
+[Sarah]: So the main pain is volume — you're growing, phones are overwhelming, and you're dropping calls both during the day and after hours.
+
+[Rachel]: That's it. We need something that can at least answer, figure out what they need, and get it to the right person. Or hold it till we can get to it. Just don't lose the lead.
+
+[Sarah]: Makes sense. And for the on-call piece — when you formalize it, would it be weekly rotations? bi-weekly?
+
+[Rachel]: Honestly we haven't gotten that far. We'd need to figure it out. Maybe start with a couple of senior techs and see how it goes. I'd probably be in the mix too for escalation.
+
+[Sarah]: And the fire protection work — when that comes up as urgent, is it usually inspection-related or something else?
+
+[Rachel]: Usually inspection-related. Failed damper, something the fire marshal flagged. We'd want to treat those as urgent but it's not like we're getting alarm activations at 3 AM. It's different from a pure fire alarm company.
+
+[Sarah]: Got it. So the core emergency is HVAC — no heat, no AC — and then inspection follow-ups when they're time-sensitive.
+
+[Rachel]: Right. That sums it up.
+
+[Sarah]: How many people would be in the on-call pool when you set it up? Ballpark.
+
+[Rachel]: Maybe three or four? We've got a couple of lead techs who'd probably do it. And me for backup. We'd need to figure out the schedule — weekly, bi-weekly, whatever makes sense.
+
+[Sarah]: And ServiceTitan — you'd want new requests to flow there eventually?
+
+[Rachel]: Yeah. We do everything in ServiceTitan. Scheduling, dispatching, invoicing. If Clara could capture the info and we get it into there, that'd be ideal.
+
+[Sarah]: We can look at that. For now the priority is making sure no call goes unanswered. Integration is phase two.
+
+[Rachel]: That's fine. Answering is the main thing.

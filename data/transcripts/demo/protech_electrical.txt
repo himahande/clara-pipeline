@@ -1,0 +1,86 @@
+DEMO CALL TRANSCRIPT — Clara Answers
+Company: ProTech Electrical Services
+Date: [Demo]
+Participants: Sarah (Clara Sales), Marcus Webb (Dispatch Manager, ProTech)
+
+---
+
+[Sarah]: Hey Marcus, thanks for making time. Clara Answers is an AI voice agent for service trade companies — answers your line 24/7, qualifies emergencies, routes calls. I'd love to hear how ProTech handles calls today.
+
+[Marcus]: We're in the Denver area. Electrical — commercial and industrial — plus we do a lot of fire alarm systems.
+
+[Sarah]: So electrical and fire alarm are both big for you?
+
+[Marcus]: Right. Panels, inspections, troubleshooting. Our electricians handle both. We've got a good crew.
+
+[Sarah]: Who's taking calls right now?
+
+[Marcus]: We have three dispatchers. They rotate. Office hours are roughly 7 to 4:30, Monday through Friday. Mountain time.
+
+[Sarah]: Three dispatchers — that's solid. So during the day you're covered?
+
+[Marcus]: Usually. Depends on the day.
+
+[Sarah]: Busy days?
+
+[Marcus]: Sometimes all three are on calls and the fourth ring goes to voicemail. And after 4:30, it's all voicemail. No coverage.
+
+[Sarah]: What happens with those after-hours calls?
+
+[Marcus]: Same story as everybody else. We find out next morning. Sometimes it's fine — "can you schedule an estimate for next week?" Sometimes it's an electrical fire, a fire panel in trouble, something that needed a response that night.
+
+[Sarah]: Red-tagged — code enforcement?
+
+[Marcus]: Yeah. We've had buildings get red-tagged because we didn't get back to them fast enough. Fire marshal shows up, alarm's been in trouble for 24 hours, boom. Shut down till it's fixed.
+
+[Sarah]: Ouch. So you do get real emergencies.
+
+[Marcus]: Yeah. Electrical fires, code violations, fire panel malfunctions. Anything where the building's at risk or they're getting fined. Those need to go to somebody who can respond.
+
+[Sarah]: Do you have an on-call rotation for that?
+
+[Marcus]: We've talked about it. We have techs who'd do it. But we never really formalized it. No designated number, no clear escalation. It's been on the list.
+
+[Sarah]: So when an emergency does come in after hours, there's no defined path right now?
+
+[Marcus]: Not really. Ideally it'd go to a senior tech or one of the dispatchers — someone who knows the customers and can mobilize. We'd need to figure out the order. Who's first, who's backup. That kind of thing.
+
+[Sarah]: And during the day — when all three dispatchers are busy, where does that fourth call go?
+
+[Marcus]: Voicemail. Or it just rings. We've had customers hang up after 10 rings. Not great.
+
+[Sarah]: So there's overflow during business hours too, not just after hours.
+
+[Marcus]: Yeah. Busy days, we're juggling. New construction, service calls, emergencies. It adds up.
+
+[Sarah]: For routing — emergency vs non-emergency. Would they go to the same people or different?
+
+[Marcus]: During the day, same pool — the dispatchers. They know how to triage. After hours, we'd want emergencies to hit the on-call person. Non-emergency could wait. Take a message, we'll call back.
+
+[Sarah]: Any software you're on — ServiceTitan, ServiceTrade?
+
+[Marcus]: ServiceTitan. For everything.
+
+[Sarah]: And one more — when you say "emergency," besides electrical fires and fire panel issues, what else? Code violations?
+
+[Marcus]: Code violations that could get a building shut down. Power outages in critical facilities. Anything safety-related. We've had hospitals and schools. They can't wait till morning.
+
+[Sarah]: During the day when all three are busy — would overflow go to voicemail or would you want Clara to catch it?
+
+[Marcus]: Catch it. Take a message, get the details. We'll call back. Better than losing them.
+
+[Sarah]: And the red-tag situations — are those mostly fire panel issues or broader electrical?
+
+[Marcus]: Mix. Fire panel trouble is big. We also get calls for emergency repairs — something failed an inspection and they need it fixed before they can operate. Those can't wait.
+
+[Sarah]: So we're talking first-call resolution for emergencies, and message capture for everything else. Does that match what you're looking for?
+
+[Marcus]: Yeah. We need to stop missing people. Day or night.
+
+[Sarah]: Perfect. We'd work with you on the routing tree — who gets called first, fallbacks, timeouts. All that gets configured before go-live.
+
+[Marcus]: Good. We've got the people. We just need the system to connect the dots.
+
+[Sarah]: Sounds like we're aligned. I'll send over a proposal and we can schedule a config call to dig into the routing.
+
+[Marcus]: Works for me.
